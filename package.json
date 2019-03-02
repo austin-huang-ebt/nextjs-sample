@@ -1,6 +1,14 @@
 {
   "name": "nextjs-sample",
   "version": "1.0.0",
+  "author": "Austin Huang",
+  "description": "A sample setup of a frontend technical stack using React.js, Next.js, Redux-Form and Material UI.",
+  "keywords":["node.js","Next.js","React","Redux","redux-form","Material-UI","javascript"],
+  "license":"MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/austin-huang-ebt/nextjs-sample"
+  },
   "scripts": {
     "dev": "node --inspect -r dotenv/config server.js",
     "build": "next build",
@@ -17,9 +25,11 @@
     "next": "^7.0.2",
     "next-redux-wrapper": "^2.1.0",
     "prop-types": "^15.7.1",
+    "jss": "latest",
     "ramda": "^0.26.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-jss": "^8.1.0",
     "react-redux": "^5.1.1",
     "redux": "^4.0.1",
     "redux-form": "^8.1.0",

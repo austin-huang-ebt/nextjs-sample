@@ -5,6 +5,8 @@ This is a sample setup of below frontend technical stack:
 - Next.js
 - Material UI
 
+This uses https://jsonplaceholder.typicode.com/ to show sample API calls.
+
 # install
 
 `npm install`
