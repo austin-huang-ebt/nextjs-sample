@@ -1,0 +1,30 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "no-console": 0,
+    "no-nested-ternary": "off",
+    "quote-props": "warn",
+    "max-len": "warn",
+    "no-var": "error",
+    "no-underscore-dangle": 0,
+    "linebreak-style": 0
+  }
+}
