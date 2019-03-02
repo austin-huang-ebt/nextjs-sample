@@ -15,7 +15,9 @@ import {
 import * as actions from '../actions';
 import * as constants from '../config/constants';
 
+// https://github.com/mui-org/material-ui
 // https://github.com/mui-org/material-ui/issues/10982#issuecomment-424269663
+
 const styles = theme => ({
   paper: {
     margin: theme.spacing.unit,
