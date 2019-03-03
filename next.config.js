@@ -1,5 +1,4 @@
 // next.config.js
-const path = require('path');
 const withCSS = require('@zeit/next-css');
 
 const { ANALYZE } = process.env;
@@ -17,7 +16,6 @@ module.exports = withCSS({
     }
 
     // Fixes npm packages that depend on `fs` module
-    // eslint-disable-next-line no-param-reassign
     config.node = {
       ...config.node,
       fs: 'empty',

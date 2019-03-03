@@ -1,7 +1,10 @@
 // copied from https://github.com/mui-org/material-ui/blob/master/examples/nextjs/src/getPageContext.js
 
 import { SheetsRegistry } from 'jss';
-import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
+import {
+  createMuiTheme,
+  createGenerateClassName
+} from '@material-ui/core/styles';
 
 // dark theme
 const theme = createMuiTheme({
@@ -25,8 +28,8 @@ function createPageContext() {
 let pageContext;
 
 export default function getPageContext() {
-  // Make sure to create a new context for every server-side request so that data
-  // isn't shared between connections (which would be bad).
+  // Make sure to create a new context for every server-side request so that
+  // data isn't shared between connections (which would be bad).
   if (!process.browser) {
     return createPageContext();
   }

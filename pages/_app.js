@@ -25,7 +25,9 @@ class MyApp extends App {
   }
 
   static async getInitialProps({ Component, ctx }) {
-    const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
+    const pageProps = Component.getInitialProps
+      ? await Component.getInitialProps(ctx)
+      : {};
 
     if (ctx.isServer) {
       pageProps.title = process.env.UISVR_APPTITLE;
@@ -52,13 +54,14 @@ class MyApp extends App {
             theme={this.pageContext.theme}
             sheetsManager={this.pageContext.sheetsManager}
           >
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            {/* CssBaseline kickstart an elegant, consistent, and simple
+                baseline to build upon. */}
             <CssBaseline />
-              <Provider store={store}>
-                {/* Pass pageContext to the _document though the renderPage enhancer
-                    to render collected styles on server-side. */}
-                <Component pageContext={this.pageContext} {...pageProps} />
-              </Provider>
+            <Provider store={store}>
+              {/* Pass pageContext to the _document though the renderPage
+                  enhancer to render collected styles on server-side. */}
+              <Component pageContext={this.pageContext} {...pageProps} />
+            </Provider>
           </MuiThemeProvider>
         </JssProvider>
       </Container>

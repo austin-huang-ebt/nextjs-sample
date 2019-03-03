@@ -12,7 +12,10 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 console.info('Environment variables received:');
-console.info(JSON.stringify(R.pickBy((varValue, varName) => varName.startsWith('UISVR'), process.env), null, 2));
+console.info(JSON.stringify(
+  R.pickBy((varValue, varName) => varName.startsWith('UISVR'), process.env),
+  null, 2
+));
 
 app.prepare()
   .then(() => {
@@ -39,12 +42,12 @@ app.prepare()
 
     const port = process.env.UISVR_PORT || 3000;
 
-    server.listen(port, (err) => {
+    server.listen(port, err => {
       if (err) throw err;
-      console.log(`> Ready on http://0.0.0.0:${port}`);
+      console.log(`> Ready on http://0.0.0.0:${ port }`);
     });
   })
-  .catch((ex) => {
+  .catch(ex => {
     console.error(ex.stack);
     process.exit(1);
   });

@@ -57,14 +57,23 @@ class Root extends React.Component {
               <Field name="idToSearch" component={TextField} label="Todo ID"/>
             </Grid>
             <Grid item xs={3}>
-              <Button variant="contained" color="primary" onClick={this.fetchTodo}>Load</Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={this.fetchTodo}
+              >
+                Load
+              </Button>
             </Grid>
             <Grid item xs={6} />
             <Grid item xs={3}>
               <Field name="todo.id" component={TextField} disabled label="ID"/>
             </Grid>
             <Grid item xs={3}>
-              <FormControlLabel control={<Field name="todo.completed" component={Checkbox} /> } label="completed?" />
+              <FormControlLabel
+                control={<Field name="todo.completed" component={Checkbox} /> }
+                label="completed?"
+              />
             </Grid>
             <Grid item xs={6}>
               <Field name="todo.title" component={TextField} label="Title"/>
@@ -77,7 +86,7 @@ class Root extends React.Component {
 }
 
 export default connect(
-  (state) => {
+  state => {
     // https://redux-form.com/8.1.0/docs/api/formvalueselector.md/
     const selector = formValueSelector(constants.REDUX_FORM_NAME);
     return {

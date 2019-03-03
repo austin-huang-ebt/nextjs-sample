@@ -31,7 +31,8 @@ export default class MyDocument extends Document {
     // 3. app.render
     // 4. page.render
 
-    // Render app and page and get the context of the page with collected side effects.
+    // Render app and page and get the context of the page with collected side
+    // effects.
     let pageContext;
     const page = ctx.renderPage(Component => {
       const WrappedComponent = props => {
@@ -60,7 +61,6 @@ export default class MyDocument extends Document {
         <React.Fragment>
           <style
             id="jss-server-side"
-            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: css }}
           />
           {flush() || null}
@@ -74,9 +74,9 @@ export default class MyDocument extends Document {
 
     const docScript = `
       // set up DEBUG flag for browser side
-      DEBUG = ${process.env.UISVR_DEBUG};
+      DEBUG = ${ process.env.UISVR_DEBUG };
       // pass configuration from environment variables down to browser
-      __APISERVER__ = "${process.env.UISVR_APISERVER}";
+      __APISERVER__ = "${ process.env.UISVR_APISERVER }";
     `;
     return (
       <html lang="en" dir="ltr">
@@ -90,13 +90,17 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta
             name="theme-color"
-            content={pageContext ? pageContext.theme.palette.primary.main : null}
+            content={pageContext
+              ? pageContext.theme.palette.primary.main
+              : null
+            }
           />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
           />
-          {/* https://github.com/zeit/next.js/issues/2468#issuecomment-313074034 */}
+          {/* https://github.com/zeit/next.js/issues/2468#issuecomment-313074034
+              */}
           <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js' />
         </Head>
         <body>
