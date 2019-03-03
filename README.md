@@ -95,3 +95,20 @@ dispatch(change(constants.REDUX_FORM_NAME, 'todo', todo));
 ```
 
 Since this example makes use of redux-form actions / reducers / selectors, so the folders `reducers` and `selectors` are empty and are only placeholders. Add your own reducers and selectors when you start to use your own redux state instead of solely on redux-form state.
+
+# development tools
+
+Install Visual Studio Code (VS Code) from:
+
+https://code.visualstudio.com/download
+
+The respository contains folder `.vscode` which is a sample setup for VS Code.
+
+Install below extensions for VS Code and refer to documents of the extensions on how to use them:
+
+- Debugger for Chrome
+- DotENV
+- ESLint
+- GitLens
+- npm Intellisense
+- Visual Studio IntelliCode
