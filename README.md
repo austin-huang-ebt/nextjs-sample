@@ -17,6 +17,8 @@ npm install
 
 # run
 
+Copy `.env.sample` to `.env`.
+
 Run below to  build the application.
 
 ```shell
@@ -71,7 +73,7 @@ Below static files inside folder `static` shall also be changed as per project n
 
 Note other files inside `static` folder are useless.
 
-# Hints
+# get started
 
 Below could be the most common tasks you would want to start from here:
 
